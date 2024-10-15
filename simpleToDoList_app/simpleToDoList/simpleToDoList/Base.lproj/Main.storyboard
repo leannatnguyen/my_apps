@@ -56,15 +56,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xth-33-Dsa" secondAttribute="trailing" constant="52" id="2WJ-9n-DPl"/>
-                            <constraint firstItem="xth-33-Dsa" firstAttribute="top" secondItem="pzW-g4-IRv" secondAttribute="bottom" constant="95.666666666666657" id="6mM-Ga-dg6"/>
-                            <constraint firstItem="xth-33-Dsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="Wvm-85-Qxc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xth-33-Dsa" secondAttribute="bottom" constant="70" id="obn-O3-Q31"/>
-                            <constraint firstItem="pzW-g4-IRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uKq-oi-NeV"/>
-                            <constraint firstItem="pzW-g4-IRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y0g-Dv-8gO"/>
+                            <constraint firstItem="xth-33-Dsa" firstAttribute="top" secondItem="pzW-g4-IRv" secondAttribute="bottom" constant="95.666666666666657" id="2YQ-Vx-OYH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xth-33-Dsa" secondAttribute="trailing" constant="52" id="6Zu-AF-eRO"/>
+                            <constraint firstItem="pzW-g4-IRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9C1-fc-wUi"/>
+                            <constraint firstItem="pzW-g4-IRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XbR-rz-wPY"/>
+                            <constraint firstItem="xth-33-Dsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="klN-iT-aOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xth-33-Dsa" secondAttribute="bottom" constant="70" id="xMM-Sv-k4S"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="xth-33-Dsa" id="KtZ-wg-SWG"/>
                         <outlet property="taskTextField" destination="fwm-Je-9W0" id="hZ0-Ew-Ay7"/>
                     </connections>
                 </viewController>

@@ -32,11 +32,11 @@
 
 // Populate each cell with a task
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    // Set the text of the cell to the corresponding task
     cell.textLabel.text = self.tasks[indexPath.row];
+    
     return cell;
 }
 
@@ -48,18 +48,14 @@
        // Ensure task is not empty
        if (task.length > 0) {
            [self.tasks addObject:task]; // Add task to the tasks array
+           NSLog(@"Task added: %@", task);
+           NSLog(@"Total tasks: %lu", (unsigned long)self.tasks.count);
            self.taskTextField.text = @""; // Clear the text field
            
            [self.tableView reloadData]; // Reload the table view to display the new task
        }
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.tasks removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
 
 @end
 
