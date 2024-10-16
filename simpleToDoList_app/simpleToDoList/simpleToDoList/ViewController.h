@@ -9,6 +9,8 @@
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *taskTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+- (void)toggleCheckbox:(UIButton *)sender;
 - (IBAction)addTask:(id)sender;
 
 
